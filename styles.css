@@ -100,7 +100,72 @@ main {
 
 .service h4 {
     color: #1e90ff; /* 道奇蓝 */
-    margin-top: 0;
+}
+
+/* 产品相关样式 */
+.product-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-tagline {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.product-mission {
+    color: #e74c3c;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 0.8rem;
+    background-color: #fef9e7;
+    border-left: 4px solid #f39c12;
+    border-radius: 4px;
+}
+
+.service h5 {
+    color: #34495e;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3rem;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.feature-list li {
+    background-color: #f8f9fa;
+    margin-bottom: 0.8rem;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+    transition: transform 0.2s ease;
+}
+
+.feature-list li:hover {
+    transform: translateX(5px);
+    background-color: #e8f4fd;
+}
+
+.feature-list li strong {
+    color: #2980b9;
 }
 
 .about {
@@ -131,6 +196,24 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+}
+
+/* Tab 切换样式 */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-link {
+    transition: color 0.3s ease;
+}
+
+.tab-link.active {
+    color: #007bff;
+    font-weight: bold;
 }
 
 /* 响应式设计 */

@@ -3,41 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>思维灯塔</title>
+    <title>思维灯塔 - 梦想地图</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1><a href="index.html">思维灯塔</a></h1>
+        <h1><a href="#" onclick="showTab('home')">思维灯塔</a></h1>
         <nav>
             <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="privacy.html">隐私政策</a></li>
+                <li><a href="#" onclick="showTab('home')" id="tab-home" class="tab-link active">首页</a></li>
+                <li><a href="#" onclick="showTab('privacy')" id="tab-privacy" class="tab-link">隐私政策</a></li>
+                <li><a href="#" onclick="showTab('user-policy')" id="tab-user-policy" class="tab-link">用户政策</a></li>
             </ul>
         </nav>
     </header>
+    
     <main>
-        <section class="hero">
-            <h2>思维灯塔工作室</h2>
-            <p>我们致力于提供最佳的软件开发</p>
-        </section>
-        <section class="content">
-            <h3>我们的产品</h3>
-            <div class="service">
-                <h4>梦想地图</h4>
-                <p>通过梦想管理与进度跟踪帮您梦想清晰化并激励您做出行动去实现梦想</p>
-            </div>
-        </section>
-        <section class="content">
-            <h3>关于我们</h3>
-            <div class="service">
-                <p>思维灯塔是一个专注于软件开发的工作室。</p>
-                <p>我们的团队由经验丰富的技术专家组成，致力于开发最有效的软件。</p>
-            </div>
-        </section>
+        <!-- 首页内容 -->
+        <div id="home" class="tab-content active">
+            <section class="hero">
+                <h2>思维灯塔工作室</h2>
+                <p>我们致力于提供最佳的移动APP软件开发</p>
+            </section>
+            <section class="content">
+                <h3>我们的产品</h3>
+                <div class="service">
+                    <div class="product-header">
+                        <img src="icon.webp" alt="梦想地图图标" class="product-icon">
+                        <h4>梦想地图</h4>
+                    </div>
+                    <p class="product-tagline">梦想地图是一款创新的时间管理工具，支持记录整理梦想目标，轻松掌控梦想计划进度。</p>
+                    <h5>功能介绍</h5>
+                    <ul class="feature-list">
+                        <li><strong>快速创建：</strong>仅需两步，轻松记录你的梦想</li>
+                        <li><strong>简洁界面：</strong>拒绝繁琐，拥抱简单，梦想列表一览无余</li>
+                        <li><strong>便捷修改：</strong>无需来回切换，随时随地修改你的梦想</li>
+                        <li><strong>记录进度：</strong>支持Todo模式进度记录，成就感满满</li>
+                        <li><strong>废弃删除：</strong>左滑即可删除梦想，丢弃包袱，轻装出发</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="content">
+                <h3>关于我们</h3>
+                <div class="service">
+                    <p>思维灯塔是一个专注于软件开发的工作室。</p>
+                    <p>我们的团队由经验丰富的技术专家组成，致力于开发最有效的软件。</p>
+                </div>
+            </section>
+        </div>
+        
+        <!-- 用户政策内容 -->
+        <div id="user-policy" class="tab-content">
+            <section class="content">
+                <h2>用户政策</h2>
+                <p>牛仕琦（以下简称"我们"）依据本协议为用户（以下简称"您"）提供梦想管理。本协议对您和我们均具有法律约束力。</p>
+                
+                <h3>一、本服务的功能</h3>
+                <p>您可以使用本服务为您的梦想进行管理。</p>
+                
+                <h3>二、责任范围及限制</h3>
+                <p>您使用本服务得到的结果仅供参考，实际情况以官方为准。</p>
+                
+                <h3>三、隐私保护</h3>
+                <p>我们重视对您隐私的保护，您的个人隐私信息将根据《隐私政策》受到保护与规范，详情请参阅<a href="#" onclick="showTab('privacy')">《隐私政策》</a>。</p>
+                
+                <h3>四、其他条款</h3>
+                <p><strong>4.1</strong> 本协议所有条款的标题仅为阅读方便，本身并无实际涵义，不能作为本协议涵义解释的依据。</p>
+                
+                <p><strong>4.2</strong> 本协议条款无论因何种原因部分无效或不可执行，其余条款仍有效，对双方具有约束力。</p>
+            </section>
+        </div>
+        
+        <!-- 隐私政策内容 -->
+        <div id="privacy" class="tab-content">
+            <section class="content">
+                <h2>梦想地图APP - 用户条款与隐私协议</h2>
+                <p><strong>更新日期：2025年08月26日</strong></p>
+                <p><strong>生效日期：2025年08月26日</strong></p>
+                
+                <p>梦想地图 是由 牛仕琦（以下简称"我们"）为您提供的。本隐私声明由我们为处理您的个人信息而制定。</p>
+                
+                <p>欢迎使用我们的APP。我们重视您的隐私，并致力于保护您的个人信息安全。请您在使用本APP之前仔细阅读并理解以下用户条款及隐私协议。如果您继续使用我们的APP，您即表示同意本协议的所有内容。</p>
+                
+                <h3>1. 信息收集与使用</h3>
+                <p>在使用本APP的过程中，我们可能会收集和使用一些个人信息，以便为您提供更好的服务和优化用户体验。您提供的信息将严格用于您同意的用途。</p>
+                
+                <h3>2. 第三方信息收集与用途</h3>
+                <p>为了优化您的使用体验，我们与第三方合作，向您提供技术服务。以下是我们使用的第三方服务及其收集的信息和用途：</p>
+                
+                <p>-</p>
+                
+                <p>我们严格审核所有接入的第三方服务，并确保它们符合隐私保护的相关规定。我们会及时向您公开接入的第三方服务的最新情况，并提供相应的隐私政策链接。具体的第三方信息收集和使用方式，请以各自的官方隐私政策为准。</p>
+                
+                <h3>3. 儿童隐私</h3>
+                <p>我们特别重视儿童的隐私保护。在此声明，我们不会主动收集18岁以下用户的个人信息。如果您是18岁以下的用户，请在使用本APP之前，务必获得父母或监护人的同意。我们建议18岁以下的用户不要提供任何个人信息给我们。</p>
+                
+                <p>我们不会故意向18岁以下的用户收集、使用或披露其个人信息。如果我们发现收集到的个人信息来自18岁以下的用户，我们将尽快采取措施删除这些信息。</p>
+                
+                <h3>4. 信息的保护</h3>
+                <p>我们将采取合理的技术和管理措施保护您的个人信息不被未经授权的访问、泄露、修改或毁损。我们会在法律要求的范围内严格保护您的隐私。</p>
+                
+                <h3>5. 信息的共享与公开</h3>
+                <p>除非得到您的明确同意，我们不会将您的个人信息与第三方共享，除非法律法规要求或为了提供服务时必须与第三方合作。如有信息共享的需求，我们会根据具体情况向您说明，并确保您的隐私得到充分保护。</p>
+                
+                <h3>6. 用户权利</h3>
+                <p>您有权随时查看、更正、删除我们所收集的与您相关的个人信息。若您希望行使这些权利，您可以通过APP中的设置界面或联系客服进行操作。</p>
+                
+                <h3>7. 更新与变更</h3>
+                <p>我们可能会不时更新本协议，并在网站中进行公示。更新后的协议一经发布即自动生效。请定期查阅本协议，了解最新的隐私保护政策。</p>
+                
+                <h3>8. 联系我们</h3>
+                <p>如果您对本隐私协议有任何疑问或担忧，欢迎通过以下方式与我们联系：</p>
+                <p>邮箱：719586684@qq.com</p>
+            </section>
+        </div>
     </main>
+    
     <footer>
         <p>&copy; 2025 思维灯塔. 保留所有权利.</p>
     </footer>
+    
+    <script>
+        function showTab(tabName) {
+            // 隐藏所有tab内容
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // 移除所有tab链接的active状态
+            const tabLinks = document.querySelectorAll('.tab-link');
+            tabLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // 显示选中的tab内容
+            document.getElementById(tabName).classList.add('active');
+            
+            // 激活选中的tab链接
+            document.getElementById('tab-' + tabName).classList.add('active');
+            
+            // 更新URL hash
+            window.location.hash = tabName;
+        }
+        
+        // 页面加载时检查URL hash
+        window.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash && ['home', 'user-policy', 'privacy'].includes(hash)) {
+                showTab(hash);
+            }
+        });
+    </script>
 </body>
 </html>
